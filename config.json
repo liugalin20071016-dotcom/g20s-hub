@@ -1,0 +1,48 @@
+{
+  "timing": {
+    "match_ms": 150,
+    "double_ms": 280,
+    "long_ms": 500,
+    "repeat_delay_ms": 400,
+    "repeat_ms": 150,
+    "ime_commit_ms": 300
+  },
+  "voice": {
+    "mode": "latch",
+    "keys": ["Ctrl", "LWin"],
+    "mic_process": "wetype_update.exe",
+    "max_s": 120
+  },
+  "scroll": {
+    "notches": 5
+  },
+  "text": {
+    "prev_double": "，",
+    "next_double": "。"
+  },
+  "ring": {
+    "position": "screen_center",
+    "radius": 118,
+    "icon_size": 64,
+    "timeout_ms": 4000
+  },
+  "profiles": {
+    "claude_desktop": { "match_path": "\\WindowsApps\\Claude_", "focus_input": true, "mode_toggle": "claude",
+                        "approve": "uia", "approve_fallback": "^{Enter}",
+                        "approve_names": ["允許一次", "允许一次", "Allow once", "允許", "允许", "Allow"],
+                        "interrupt": "uia", "interrupt_names": ["停止", "Stop"],
+                        "steer": "{Enter}", "steer_buttons": ["立即传送", "立即傳送", "立即发送", "立即傳送訊息", "Send now"],
+                        "new_task_names": ["新建", "新增", "New chat", "New session"] },
+    "zcode":          { "match_exe": "ZCode.exe", "focus_input": true,
+                        "approve": "uia", "approve_names": ["允许"], "approve_confirm": ["确认"],
+                        "interrupt": "uia", "interrupt_names": ["停止", "停止生成", "中断", "Stop"],
+                        "steer": "{Enter}", "new_task_names": ["新建任务"] },
+    "codex":          { "match_path": "\\OpenAI.Codex_", "focus_input": true,
+                        "approve": "uia", "approve_names": ["Approve", "Allow", "Allow once", "批准", "允许", "允许一次"],
+                        "interrupt": "uia", "interrupt_names": ["Stop", "Stop generating", "停止", "停止生成"],
+                        "steer": "{Enter}", "steer_buttons": ["引导", "引導", "Steer"],
+                        "new_task_names": ["新建任务", "新任务", "新聊天", "新对话", "新线程", "New task", "New chat", "New thread"] },
+    "claude_code":    { "match_exe": "WindowsTerminal.exe", "match_title_regex": "(?i)claude", "approve": "{Enter}", "steer": "{Enter}" },
+    "codex_cli":      { "match_exe": "WindowsTerminal.exe", "match_title_regex": "(?i)codex",  "approve": "y",       "steer": "{Enter}" }
+  }
+}

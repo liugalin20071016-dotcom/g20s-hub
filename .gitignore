@@ -1,0 +1,24 @@
+# 编译和打包输出
+bin/
+obj/
+dist/
+
+# 运行时数据（开发模式下写在项目根目录）
+logs/
+ring.json
+
+# 针对作者自己的遥控器做的设计记录、实测数据和探测脚本：不在开源范围内，只保留在本地
+docs/
+probe/
+
+# Python 虚拟环境；早期试过的第三方驱动 / 库（Interception、AutoHotInterception、AutoHotkey），程序已不再使用
+.venv/
+_downloads/
+lib/
+
+# 编辑器 / 系统
+.vs/
+.vscode/
+*.user
+Thumbs.db
+desktop.ini
